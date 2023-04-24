@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../../assets/logo.png";
-import personLogo from "../../../assets/person-circle.svg";
 import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
 import moment from "moment";
 import Marquee from "react-fast-marquee";
