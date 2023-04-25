@@ -34,21 +34,21 @@ const LeftNav = () => {
       </div>
 
       <div>
-        <img className="mb-2" src={img1} alt="" />
+        <img className="mb-2 w-100" src={img1} alt="" />
         <h6>Bayern Slams Authorities Over Flight Delay to Club World Cup</h6>
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between">
         <p>Sports</p> 
         <p><FaCalendarAlt/> {moment().format("MMM D, YYYY")}</p>
         </div>
-        <img className="mb-2" src={img2} alt="" />
+        <img className="mb-2 w-100" src={img2} alt="" />
         <h6>Bayern Slams Authorities Over Flight Delay to Club World Cup</h6>
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between">
         <p>Sports</p> 
         <p><FaCalendarAlt/> {moment().format("MMM D, YYYY")}</p>
         </div>
-        <img className="mb-2" src={img3} alt="" />
+        <img className="mb-2 w-100" src={img3} alt="" />
         <h6>Bayern Slams Authorities Over Flight Delay to Club World Cup</h6>
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between">
         <p>Sports</p> 
         <p><FaCalendarAlt/> {moment().format("MMM D, YYYY")}</p>
         </div>
