@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <Container>
       <div className="text-center">
-        <img className="mt-4" src={logo} alt="" />
+        <img className="mt-4 img-fluid" src={logo} alt="" />
         <p>
           <small>Journalism Without Fear or Favor</small>
         </p>

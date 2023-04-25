@@ -1,25 +1,39 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaCalendarAlt } from "react-icons/fa";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import Category from "../Category/Category";
+import EditorsInsight from "./EditorsInsight/EditorsInsight";
 
 const News = () => {
   const news = useLoaderData();
-  const { _id, title, details, image_url, author, rating, total_view, category_id } = news;
-  console.log(news);
+  const {
+    _id,
+    title,
+    details,
+    image_url,
+    author,
+    rating,
+    total_view,
+    category_id,
+  } = news;
 
   return (
-    <Card>
-      <Card.Img variant="top" src={image_url} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>
-          {details}
-        </Card.Text>
-        <Link to= {`/category/${category_id}`}><Button variant="danger"><FaArrowLeft/> All news in this category</Button></Link>
-      </Card.Body>
-    </Card>
+    <div>
+      <Card>
+        <Card.Img variant="top" src={image_url} />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{details}</Card.Text>
+          <Link to={`/category/${category_id}`}>
+            <Button variant="danger">
+              <FaArrowLeft /> All news in this category
+            </Button>
+          </Link>
+        </Card.Body>
+      </Card>
+      <EditorsInsight></EditorsInsight>
+    </div>
   );
 };
 

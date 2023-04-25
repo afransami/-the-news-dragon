@@ -52,7 +52,6 @@ const RightNav = () => {
         <h2 className="pt-5">Create an <br /> Amazing <br /> Newspaper</h2><br />
         <p>Discover thousands of <br /> options, easy to <br /> customize layouts, one-click <br /> to import demo and much more.</p><br />
         <Button variant="danger">Learn More</Button>{' '}
-
       </div>
     </div>
   );

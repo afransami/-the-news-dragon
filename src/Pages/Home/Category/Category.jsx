@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import Newscard from '../Newscard/Newscard';
+import NewsCard from '../Newscard/Newscard';
 
 const Category = () => {
     const {id} = useParams();
@@ -9,10 +9,10 @@ const Category = () => {
     return (
         <div className='mt-3'>
            {
-                categoryNews.map(news =><Newscard
+                categoryNews.map(news =><NewsCard
                 key={news._id}
                 news= {news}
-                ></Newscard>)                
+                ></NewsCard>)                
             }
             
         </div>

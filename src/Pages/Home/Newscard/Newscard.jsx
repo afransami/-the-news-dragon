@@ -12,7 +12,7 @@ import {
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
-const Newscard = ({ news }) => {
+const NewsCard = ({ news }) => {
   const { _id, title, details, image_url, author, rating, total_view } = news;
 
   return (
@@ -75,4 +75,4 @@ const Newscard = ({ news }) => {
   );
 };
 
-export default Newscard;
+export default NewsCard;
