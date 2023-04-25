@@ -55,15 +55,16 @@ const Newscard = ({ news }) => {
       </Card.Body>
       <Card.Footer className="text-muted d-flex justify-content-between">
         <div className="">
-            <Rating>
-            placeholderRating={rating?.number}
+            <Rating className="text-warning"
+            placeholderRating={rating.number}
             readonly
             emptySymbol={<FaRegStar></FaRegStar>}
             placeholderSymbol={<FaStar></FaStar>}
             fullSymbol={<FaStar></FaStar>}
+            >            
             </Rating>          
+          <span> {rating?.number}</span>
 
-          {/* <span>{rating?.number}</span> */}
         </div>
 
         <div>
