@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "../../../assets/logo.png";
-import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
+import { Button, Container} from "react-bootstrap";
 import moment from "moment";
 import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
-import { FaUserAlt, FaUserCircle } from "react-icons/fa";
+
 
 const Header = () => {
+
   return (
     <Container>
       <div className="text-center">
@@ -24,26 +24,7 @@ const Header = () => {
         </Marquee>
       </div>
 
-      <Navbar className="mt-3" collapseOnSelect expand="lg" bg="white" variant="white">
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto fw-bold fs-5">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link href="#pricing">Career</Nav.Link>
-            </Nav>
-            <Nav className="d-flex align-items-center">
-                <Link className="fs-2 text-black" >
-              <FaUserCircle/>               
-              </Link>             
-              <Nav.Link eventKey={2} href="#memes">
-                <Button variant="secondary" className="bg-dark text-white fw-bold">Login</Button>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    
     </Container>
   );
 };

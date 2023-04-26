@@ -29,7 +29,7 @@ const NewsCard = ({ news }) => {
             </div>
           </div>
           <div>
-            <FaRegBookmark />
+            <FaRegBookmark className="mx-2"/>
             <FaShareAlt />
           </div>
         </div>
