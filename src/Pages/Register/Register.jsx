@@ -2,8 +2,10 @@
 import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { getAuth } from "firebase/auth";
 
 const Register = () => {
+    const 
     return (
         <Container className="mx-auto w-50">
         <h3>Please Register</h3>
