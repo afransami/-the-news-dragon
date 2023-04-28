@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 import {
   FaFacebookSquare,
   FaGithub,
@@ -10,16 +10,40 @@ import {
 import image1 from "../../../assets/qZone1.png";
 import image2 from "../../../assets/qZone2.png";
 import image3 from "../../../assets/qZone3.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+
 
 const RightNav = () => {
+  const {googleSignIn, githubSignIn}= useContext(AuthContext)
+
+  const handleGoogleLogin = ()=>{
+    googleSignIn()
+    .then (result =>{
+      const user = result.user;
+      console.log(user);
+    })
+    .catch (error=> console.error(error))  
+  }
+
+  const handleGithubSignIn = ()=>{
+    githubSignIn()
+    .then (result =>{
+      const user = result.user; 
+      console.log(user);       
+    })
+    .catch (error =>{
+      console.error(error);
+    })
+  }
   return (
     <div className="text-start">
       <h4 className="fw-bold mt-3">Login With</h4>
-      <Button className="mb-2" variant="outline-primary">
+      <Button onClick={handleGoogleLogin} className="mb-2" variant="outline-primary">
         {" "}
         <FaGoogle /> Login with Google
       </Button>
-      <Button variant="outline-secondary">
+      <Button onClick={handleGithubSignIn} variant="outline-secondary">
         {" "}
         <FaGithub /> Login with Github
       </Button>

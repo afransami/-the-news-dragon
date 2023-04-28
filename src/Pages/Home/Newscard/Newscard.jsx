@@ -1,13 +1,12 @@
 import moment from "moment";
 import React from "react";
-import { Card, Image} from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 import {
   FaEye,
-  FaRegBookmark, 
-  FaRegStar, 
+  FaRegBookmark,
+  FaRegStar,
   FaShareAlt,
   FaStar,
- 
 } from "react-icons/fa";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
@@ -25,11 +24,11 @@ const NewsCard = ({ news }) => {
               <h5>{author?.name}</h5>
               <span>
                 <>{moment(author?.published_date).format("YYYY-MM-D")}</>
-              </span>              
+              </span>
             </div>
           </div>
           <div>
-            <FaRegBookmark className="mx-2"/>
+            <FaRegBookmark className="mx-2" />
             <FaShareAlt />
           </div>
         </div>
@@ -55,16 +54,15 @@ const NewsCard = ({ news }) => {
       </Card.Body>
       <Card.Footer className="text-muted d-flex justify-content-between">
         <div className="">
-            <Rating className="text-warning"
+          <Rating
+            className="text-warning"
             placeholderRating={rating.number}
             readonly
             emptySymbol={<FaRegStar></FaRegStar>}
             placeholderSymbol={<FaStar></FaStar>}
             fullSymbol={<FaStar></FaStar>}
-            >            
-            </Rating>          
+          ></Rating>
           <span> {rating?.number}</span>
-
         </div>
 
         <div>
