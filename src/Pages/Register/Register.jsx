@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  const [accepted, setAccepted]= useState(false)
+  const [accepted, setAccepted] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const { createUser } = useContext(AuthContext);
@@ -41,10 +41,9 @@ const Register = () => {
       });
   };
 
-  const handleTerms =event=>{
-    setAccepted (event.target.checked);    
-  }
-
+  const handleTerms = (event) => {
+    setAccepted(event.target.checked);
+  };
 
   return (
     <Container className="mx-auto w-50">
@@ -83,9 +82,22 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check onClick={handleTerms} type="checkbox" label={<>Accept <Link to= '/terms'>terms and Conditions</Link> </>} />
+          <Form.Check
+            onClick={handleTerms}
+            type="checkbox"
+            label={
+              <>
+                Accept <Link to="/terms">terms and Conditions</Link>{" "}
+              </>
+            }
+          />
         </Form.Group>
-        <Button disabled= {!accepted} className="w-" variant="primary" type="submit">
+        <Button
+          disabled={!accepted}
+          className="w-"
+          variant="primary"
+          type="submit"
+        >
           Register
         </Button>
         <br />
