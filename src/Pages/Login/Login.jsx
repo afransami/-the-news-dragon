@@ -59,8 +59,8 @@ const Login = () => {
           <small>
             {show ? <span>Hide Password</span> : <span>Show Password</span>}
           </small>
-          </p>
-        
+        </p>
+
         <br />
         <Button variant="primary" type="submit">
           Login
