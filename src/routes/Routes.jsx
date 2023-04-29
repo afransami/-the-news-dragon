@@ -13,31 +13,26 @@ import Terms from "../Pages/Home/Terms/Terms";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <LoginLayout></LoginLayout>,
-    children:[
+    children: [
       {
-        path: '/',
-        element: <Navigate to= '/category/0'></Navigate>
-
+        path: "/",
+        element: <Navigate to="/category/0"></Navigate>,
       },
       {
-        path: '/login',
-        element: <Login></Login>
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path: '/register',
-        element: <Register></Register>
+        path: "/register",
+        element: <Register></Register>,
       },
       {
-        path: '/terms',
-        element: <Terms></Terms>
-      }
-
-    ]
-
-
-
+        path: "/terms",
+        element: <Terms></Terms>,
+      },
+    ],
   },
   {
     path: "category",
@@ -47,19 +42,23 @@ const router = createBrowserRouter([
         path: ":id",
         element: <Category></Category>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.id}`),
+          fetch(`https://the-dragon-news.vercel.app/categories/${params.id}`),
       },
     ],
   },
   {
     path: "/news",
-    element: <PrivateRoute><NewsLayout></NewsLayout></PrivateRoute>,
+    element: (
+      <PrivateRoute>
+        <NewsLayout></NewsLayout>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "/news/:id",
         element: <News></News>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/news/${params.id}`),
+          fetch(`https://the-dragon-news.vercel.app/news/${params.id}`),
       },
     ],
   },
