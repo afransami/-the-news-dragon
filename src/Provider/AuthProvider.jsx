@@ -9,27 +9,27 @@ import {
 } from "firebase/auth";
 import { createContext } from "react";
 import app from "../firebase/firebase.config";
-import { GoogleAuthProvider, GithubAuthProvider  } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 const auth = getAuth(app);
 
 export const AuthContext = createContext(null);
 
-  const GoogleProvider = new GoogleAuthProvider();
-  const googleSignIn = signInWithPopup(auth, GoogleProvider)
-
-  const GithubProvider = new GithubAuthProvider()
-  const githubSignIn = signInWithPopup (auth, GithubProvider)
-
-
-
-  const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const [user, setUser] = useState("null");
   const [loading, setLoading] = useState(true);
-  
 
+  const googleSignIn = () => {
+    setLoading(true);
+    const GoogleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, GoogleProvider);
+  };
 
-
+  const githubSignIn = () => {
+    setLoading(true);
+    const GithubProvider = new GithubAuthProvider();
+    return signInWithPopup(auth, GithubProvider);
+  };
 
   const createUser = (email, password) => {
     setLoading(true);
