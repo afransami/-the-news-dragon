@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, NavLink, Navbar } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
+import { AuthContext } from "../../../Provider/AuthProvider"
+import './Navigation.css';
+
 
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -27,7 +29,7 @@ const Navigation = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto fw-bold fs-5 text-black">
               <Link
-                className="text-decoration-none text-black"
+                className=" text-decoration-none text-black" 
                 to="/category/0"
               >
                 Home
@@ -52,7 +54,7 @@ const Navigation = () => {
                 <Button
                   onClick={handleLogOut}
                   variant="secondary"
-                  className="bg-dark text-white fw-bold"
+                  className="bg-danger text-white fw-bold"
                 >
                   Logout
                 </Button>
@@ -60,7 +62,7 @@ const Navigation = () => {
                 <Link to="/login">
                   <Button
                     variant="secondary"
-                    className="bg-dark text-white fw-bold"
+                    className="bg-danger text-white fw-bold"
                   >
                     Login
                   </Button>

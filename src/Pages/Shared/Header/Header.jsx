@@ -17,7 +17,7 @@ const Header = () => {
         </p>
         <h4>{moment().format("dddd, MMMM D, YYYY")}</h4>
       </div>
-      <div className="d-flex bg-secondary bg-opacity-10">
+      <div className="d-flex bg-success bg-opacity-10 rounded">
         <Button variant="danger fs-3 fw-bold">Latest</Button>
         <Marquee className="fw-bold fs-3" speed={50}>
           I can be a React component, multiple React components, or just some

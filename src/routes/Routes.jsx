@@ -8,6 +8,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Terms from "../Pages/Home/Terms/Terms";
+import Career from "../Pages/Career/Career";
+import About from "../Pages/About/About";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
+        path: 'career',
+        element: <Career></Career>
+      },
+      {
+        path: 'about',
+        element: <About></About>
+      },
+      {
         path: "/register",
         element: <Register></Register>,
       },
@@ -32,6 +42,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "category",
     element: <Main></Main>,

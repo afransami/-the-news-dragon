@@ -17,7 +17,7 @@ const LeftNav = () => {
   }, []);
 
   return (
-    <div className="text-start">
+    <div className="text-start bg-success bg-opacity-10 px-2 rounded">
       <h4>All Category</h4>
       <h5 className="bg-success bg-opacity-10 p-3 rounded ">National News</h5>
       <div>
