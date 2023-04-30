@@ -10,8 +10,6 @@ const Login = () => {
   const { loginUser } = useContext(AuthContext);
   const Navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
-
   const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (event) => {
@@ -19,8 +17,7 @@ const Login = () => {
     setSuccess("");
     const form = event.target;
     const email = form.email.value;
-    const password = form.password.value;
-    console.log(email, password);
+    const password = form.password.value;    
 
     loginUser(email, password)
       .then((result) => {
